@@ -25,7 +25,7 @@ resource "azurerm_windows_virtual_machine" "domain-controller" {
 
   os_disk {
     caching              = "ReadWrite"
-    storage_account_type = "Premium_GRS"
+    storage_account_type = "Premium_LRS"
   }
 
   source_image_reference {
