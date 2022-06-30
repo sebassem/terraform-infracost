@@ -14,7 +14,7 @@ resource "azurerm_windows_virtual_machine" "domain-controller" {
   name                = local.virtual_machine_name
   resource_group_name = var.resource_group_name
   location            = var.location
-  size                = "Standard_F8s_v2"
+  size                = "Standard_F4s_v2"
   admin_username      = var.admin_username
   admin_password      = var.admin_password
   custom_data         = local.custom_data
@@ -25,7 +25,7 @@ resource "azurerm_windows_virtual_machine" "domain-controller" {
 
   os_disk {
     caching              = "ReadWrite"
-    storage_account_type = "Premium_LRS"
+    storage_account_type = "Standard_LRS"
   }
 
   source_image_reference {
